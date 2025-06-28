@@ -3,7 +3,7 @@ const axios = require("axios");
 const app = express();
 
 const config = {
-    ownerid: "c3ctpOZt7u",
+    ownerid: "c3ctpOZt7u", // <- seu Owner ID correto
     appname: "Marketada",
     version: "1.0",
     secret: "ac105104dcafef3466350b583ebd6ff856d30684e7aaae62ad068f5a3d0046e9"
