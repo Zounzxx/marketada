@@ -26,14 +26,15 @@ app.get("/verificar", async (req, res) => {
         });
         return res.json(response.data);
     } catch (err) {
+        console.error(err.response?.data || err.message);
         return res.status(500).json({ success: false, message: "Erro ao verificar key" });
     }
 });
 
 app.get("/", (req, res) => {
-    res.send("🟢 Proxy KeyAuth v1.3 rodando!");
+    res.send("🟢 API do Marketada Online (KeyAuth v1.3)");
 });
 
 app.listen(3000, () => {
-    console.log("✅ Servidor rodando em http://localhost:3000");
+    console.log("✅ Servidor rodando na porta 3000");
 });
