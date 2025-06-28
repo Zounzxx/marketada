@@ -1,9 +1,10 @@
+
 const express = require("express");
 const axios = require("axios");
 const app = express();
-// test
+
 const config = {
-    ownerid: "c3ctpOZt7u", // <- seu Owner ID do KeyAuth
+    ownerid: "c3ctpOZt7u",
     appname: "Marketada",
     version: "1.0",
     secret: "ac105104dcafef3466350b583ebd6ff856d30684e7aaae62ad068f5a3d0046e9"
@@ -23,11 +24,19 @@ app.get("/verificar", async (req, res) => {
     };
 
     try {
-        const response = await axios.post("https://keyauth.win/api/1.0/", data);
+        const response = await axios.post("https://keyauth.win/api/1.0/", data, {
+            headers: { "Content-Type": "application/json" }
+        });
         return res.json(response.data);
     } catch (err) {
         return res.status(500).json({ success: false, message: "Erro ao verificar key" });
     }
 });
 
-app.listen(3000, () => console.log("✅ Proxy rodando na porta 3000"));
+app.get("/", (req, res) => {
+    res.send("Marketada KeyAuth Proxy online ✅");
+});
+
+app.listen(3000, () => {
+    console.log("✅ Proxy rodando em http://localhost:3000");
+});
