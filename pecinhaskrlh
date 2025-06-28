@@ -84,10 +84,10 @@ local version = "u-1a_041725"
 
 -- Window
 local Window = Rayfield:CreateWindow({
-   Name = "Pecinhas",
+   Name = "Marketada",
    Icon = 0,
-   LoadingTitle = "Pecinhas",
-   LoadingSubtitle = "by bucksdll",
+   LoadingTitle = "Marketada",
+   LoadingSubtitle = "by bucksmatarolando",
    Theme = {
         TextColor = Color3.fromRGB(240, 240, 240),
 
@@ -135,8 +135,8 @@ local Window = Rayfield:CreateWindow({
 
    ConfigurationSaving = {
       Enabled = true,
-      FolderName = "Pecinhas",
-      FileName = "Pecinhas"
+      FolderName = "Marketada",
+      FileName = "Marketada"
    },
 
    Discord = {
