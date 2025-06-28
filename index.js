@@ -1,3 +1,4 @@
+
 const express = require("express");
 const axios = require("axios");
 const app = express();
@@ -22,9 +23,7 @@ app.get("/verificar", async (req, res) => {
 
     try {
         const response = await axios.post("https://keyauth.win/api/1.3/", data, {
-            headers: {
-                "Content-Type": "application/json"
-            }
+            headers: { "Content-Type": "application/json" }
         });
         return res.json(response.data);
     } catch (err) {
